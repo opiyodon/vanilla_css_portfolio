@@ -1,0 +1,1225 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+
+
+/*========================NAVIGATION BAR effects=======================*/
+.nav{
+	position: relative;
+	height: 100%;
+	padding-top: 20px;
+	padding-left: 100px;
+	background: black;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 70px;
+}
+
+
+
+/*========================LOGO effects=======================*/
+.logo{
+	color: white;
+	font-size: 50%;
+	letter-spacing: 3px;
+	cursor: pointer;
+}
+
+.spanlogo{
+	color: red;
+}
+
+
+
+/*========================MENU effects=======================*/
+.menu{
+	float: left;
+}
+
+.menu ul{
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 50px;
+}
+
+
+.menu ul li{
+	list-style: none;
+	display: inline-block;
+	margin-top: -15px;
+	margin-left: 25px;
+	padding: 0px;
+	position: relative;
+}
+
+.menu ul li a{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 30%;
+	letter-spacing: 2px;
+}
+
+
+.menu ul li::after{
+	content: '';
+	height: 3px;
+	width: 0;
+	background: red;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	transition: 0.5s ease;
+}
+
+
+.menu ul li:hover::after{
+	width: 100%;
+}
+/*.active{
+	background: red;
+}*/
+
+
+
+
+/*========================FIRST SECTION effects=======================*/
+#main{
+	position: relative;
+	height: 95vh;
+	background-image: linear-gradient(to top,rgba(0,0,0,0.75)90%,rgba(0,0,0,0.75)90%),url(6.jpg);
+	background-size: cover;
+	background-position: center;
+	font-size: 50px;
+}
+
+
+
+
+/*========================CONTENT effects=======================*/
+.content{
+	position: absolute;
+	top: 50%;
+	left: 8%;
+	transform: translateY(-50%);
+	letter-spacing: 2px;
+	color: white;
+}
+
+.content h4 {
+	font-size: 25px;
+	font-family: arial;
+}
+
+.content h1{
+	font-size: 95px;
+	margin: 20px 0px 20px;
+	word-spacing: 15px;
+	letter-spacing: 8px;
+	font-family: times new roman;
+}
+
+
+/*========================(I AM A WEB DEVELOPER)TEXT ANIMATION effects=======================*/
+.wrapper{
+	font-size: 30px;
+	font-family: arial;
+	display: flex;
+}
+
+.static-txt{
+	display: inline-block;
+}
+
+.dynamic-txt{
+	display: inline-block;
+	height: 33px;
+	overflow: hidden;
+	margin-top: 2px;
+}
+
+.dynamic-txt div{
+	animation: 18s wordChange;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(1);
+	animation-fill-mode: backwards;
+}
+
+.dynamic-txt span{
+	position: relative;
+	margin-left: 8px;
+	color: red;
+	display: block;
+	text-align: left;
+}
+
+.dynamic-txt span:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	height: 100%;
+	border-left: 2px solid red;
+	right: -2px;
+	background-color: black;
+	animation: 3s textType;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(35);
+	animation-fill-mode: backwards;
+}
+
+@keyframes textType{
+	0%{
+		left: 0;
+	}
+	50%{
+		left: 100%;
+	}
+	100%{
+		left: 0;
+	}
+}
+
+@keyframes wordChange{
+	0%{
+		margin-top: 0;
+	}
+	16.666%{
+		margin-top: -35px;
+	}
+	33.332%{
+		margin-top: -70px;
+	}
+	49.998%{
+		margin-top: -105px;
+	}
+	66.664%{
+		margin-top: -137px;
+	}
+	83.33%{
+		margin-top: -171px;
+	}
+	100%{
+		margin-top: 0;
+	}
+}
+
+
+
+/*========================Button(DOWNLOAD CV) effects=======================*/
+.btn{
+	width: 250px;
+	padding: 15px 0;
+	text-align: center;
+	margin-top: 20px;
+	border-radius: 85px;
+	border: 2px solid red;
+	background: transparent;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 20px;
+	position: absolute;
+	top: 70%;
+	left: 8%;
+	overflow: hidden;
+	transition: 0.4s ease;
+}
+
+.btn a{
+	text-decoration: none;
+	color: white;
+}
+
+.spanbtn{
+	color: red;
+	margin-left: 13px;
+	font-family: times new roman;
+	font-size: 130%;
+	transition: 0.4s ease;
+}
+
+.btn:hover span.spanbtn{
+	color: black;
+}
+
+/*========================to change animation effect on Button start here=======================*/
+.btn:hover{
+	background: red;
+}
+
+.btn:focus{
+	outline: none;
+}
+
+
+
+/*========================ABOUT ME SECTION effects=======================*/
+#aboutme{
+	font-size: 20px;
+	padding-left: 8%;
+	display: block;
+}
+
+#aboutme .title{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 40px;
+}
+
+
+#aboutme .title h2{
+	color: red;
+	font-weight: medium;
+}
+
+/*========================OPIYO effects=======================*/
+.opiyo{
+	padding: 45px;
+	display: block;
+	height: 150px;
+	background: linear-gradient(to top,rgba(0, 0, 0, 0.8)50%,rgba(0, 0, 0, 0.8)50%);
+	position: relative;
+	color: white;
+	margin-left: -200px;
+	padding-left: 15%;
+	margin-bottom: 50px;
+}
+
+
+.opiyo h1{
+	font-size: 200%;
+	padding-bottom: 20px;
+	font-family: times new roman;
+	margin-left: 10px;
+	font-size: 40px;
+}
+
+
+
+.spanopiyo{
+	color: red;
+}
+
+
+
+
+/*========================about BOXX effects=======================*/
+.boxx{
+display:flex;
+justify-content:center;
+align-items:center;
+margin-top: 200px;
+margin-bottom: 150px;
+}
+
+
+
+/*========================DESIGNER effects=======================*/
+.designer{
+	height:350px;
+    width:582px;
+    padding:30px 35px;
+    background: linear-gradient(to top,rgba(0, 0, 0, 0.1)90%,rgba(0, 0, 0, 0.1)90%);
+    border-radius:20px;
+    position:relative;
+    overflow:hidden;
+    text-align:center;
+    margin-left: -50px;
+    top: -160px;
+    transition: 0.5 ease;
+    box-shadow: 0 0 17px 5px grey;
+}
+
+.designer:hover{
+	background: lightgrey;
+	transform: scale(1.05);
+}
+
+
+.designer h1{
+	font-size: 200%;
+	padding-bottom: 20px;
+	font-family: times new roman;
+}
+
+
+.spandesigner{
+	color: red;
+	margin-left: 13px;
+	font-family: times new roman;
+	font-size: 100%;
+}
+
+
+
+/*========================SPORTS effects=======================*/
+.skater{
+	height:350px;
+    width:582px;
+    padding:30px 35px;
+    background: linear-gradient(to top,rgba(0, 0, 0, 0.1)90%,rgba(0, 0, 0, 0.1)90%);
+    border-radius:20px;
+    position:relative;
+    overflow:hidden;
+    text-align:center;
+    margin-left: 30px;
+    top: -160px;
+    transition: 0.5 ease;
+    box-shadow: 0 0 17px 5px grey;
+}
+
+.skater:hover{
+	background: lightgrey;
+	transform: scale(1.05);
+}
+
+
+.skater h1{
+	font-size: 200%;
+	padding-bottom: 20px;
+	font-family: times new roman;
+}
+
+
+.spanskate{
+	color: red;
+	margin-left: 13px;
+	font-family: times new roman;
+	font-size: 100%;
+}
+
+
+
+/*========================ARTIST effects=======================*/
+.artist{
+	height:350px;
+    width:582px;
+    padding:30px 35px;
+    background: linear-gradient(to top,rgba(0, 0, 0, 0.1)90%,rgba(0, 0, 0, 0.1)90%);
+    border-radius:20px;
+    position:relative;
+    overflow:hidden;
+    text-align:center;
+    margin-left: 60px;
+    right: 30px;
+    top: -160px;
+    transition: 0.5 ease;
+    box-shadow: 0 0 17px 5px grey;
+}
+
+.artist:hover{
+	background: lightgrey;
+	transform: scale(1.05);
+}
+
+
+.artist h1{
+	font-size: 200%;
+	padding-bottom: 20px;
+	font-family: times new roman;
+}
+
+
+.spanart{
+	color: red;
+	margin-left: 13px;
+	font-family: times new roman;
+	font-size: 100%;
+}
+
+
+
+/*========================Button(MORE INFO FOR DESIGNER) effects=======================*/
+.btnmoreinfo1{
+	width: 130px;
+	height: 40px;
+	text-align: center;
+	margin-top: 20px;
+	margin-left: 10px;
+	border-radius: 85px;
+	border: 2px solid red;
+	background: transparent;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 20px;
+	position: absolute;
+	top: 300px;
+	left: 33%;
+	overflow: hidden;
+	transition: 0.4s ease;
+}
+
+.btnmoreinfo1 a{
+	text-decoration: none;
+	color: black;
+}
+
+/*========================to change animation effect on Button(DOWNLOAD CV) start here=======================*/
+.btnmoreinfo1:hover{
+	background: red;
+}
+
+.btnmoreinfo1:focus{
+	outline: none;
+}
+
+
+
+/*========================Button(MORE INFO FOR SKATING) effects=======================*/
+.btnmoreinfo2{
+	width: 130px;
+	height: 40px;
+	text-align: center;
+	margin-top: 20px;
+	margin-left: 10px;
+	border-radius: 85px;
+	border: 2px solid red;
+	background: transparent;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 20px;
+	position: absolute;
+	top: 300px;
+	left: 33%;
+	overflow: hidden;
+	transition: 0.4s ease;
+}
+
+.btnmoreinfo2 a{
+	text-decoration: none;
+	color: black;
+}
+
+/*========================to change animation effect on Button(DOWNLOAD CV) start here=======================*/
+.btnmoreinfo2:hover{
+	background: red;
+}
+
+.btnmoreinfo2:focus{
+	outline: none;
+}
+
+
+
+/*========================Button(MORE INFO FOR ARTIST) effects=======================*/
+.btnmoreinfo3{
+	width: 130px;
+	height: 40px;
+	text-align: center;
+	margin-top: -30px;
+	margin-left: 125px;
+	border-radius: 85px;
+	border: 2px solid red;
+	background: transparent;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 20px;
+	position: absolute;
+	top: 350px;
+	right: 33%;
+	overflow: hidden;
+	transition: 0.4s ease;
+}
+
+.btnmoreinfo3 a{
+	text-decoration: none;
+	color: black;
+}
+
+/*========================to change animation effect on Button(DOWNLOAD CV) start here=======================*/
+.btnmoreinfo3:hover{
+	background: red;
+}
+
+.btnmoreinfo3:focus{
+	outline: none;
+}
+
+
+
+/*========================MORE INFO SECTION=======================*/
+.moreinfo{
+	position: relative;
+    padding: 45px;
+	display: block;
+	height: 1550px;
+	background: linear-gradient(to top,rgba(0, 0, 0, 0.1)90%,rgba(0, 0, 0, 0.1)90%);
+	color: black;
+	margin-left: -200px;
+	padding-left: 15%;
+	top: -280px;
+}
+
+.moreinfo .title{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 40px;
+}
+
+
+.moreinfo .title h4{
+	color: black;
+	font-weight: medium;
+}
+
+/*========================Developer=======================*/
+#developer{
+	display: block;
+	position: relative;
+	margin-left: -114px;
+	padding-left: 15%;
+	font-family: arial;
+}
+
+
+
+#developer h1{
+	font-size: 200%;
+	padding-bottom: 20px;
+	font-family: times new roman;
+	margin-left: 10px;
+}
+
+
+
+#developer h3{
+	font-size: 120%;
+	padding-bottom: 20px;
+	font-family: times new roman;
+	margin-left: 10px;
+}
+
+
+
+.spandes{
+	color: red;
+	font-family: times new roman;
+}
+
+
+
+#developer ul{
+	margin-left: 80px;
+}
+
+
+
+/*========================Skate=======================*/
+#skate{
+	display: block;
+	position: relative;
+	margin-left: -114px;
+	padding-left: 15%;
+	font-family: arial;
+	top: 30px;
+	line-height: 30px;
+	transition: 0.4s ease;
+}
+
+
+
+#skate h1{
+	font-size: 200%;
+	padding-bottom: 20px;
+	font-family: times new roman;
+	margin-left: 10px;
+}
+
+
+.spansport{
+	color: red;
+	font-family: times new roman;
+}
+
+
+#skate a:hover{
+	transition: 0.2s ease;
+	color: red;
+}
+
+
+
+/*========================Art=======================*/
+#art{
+	display: block;
+	position: relative;
+	margin-left: -114px;
+	padding-left: 15%;
+	font-family: arial;
+	top: 60px;
+	line-height: 30px;
+	transition: 0.4s ease;
+}
+
+
+
+#art h1{
+	font-size: 200%;
+	padding-bottom: 20px;
+	font-family: times new roman;
+	margin-left: 10px;
+}
+
+
+
+#art h2{
+	font-size: 120%;
+	padding-bottom: 20px;
+	font-family: times new roman;
+	margin-left: 10px;
+}
+
+
+
+#art a:hover{
+	transition: 0.2s ease;
+	color: red;
+}
+
+
+
+img{
+    position: relative;
+    display: inline-block;
+    left: 8px;
+    top: -10px;
+    width: 375px;
+    height: 365px;
+    border-radius: 10px;
+    filter: brightness(100%);
+    object-fit: cover;
+}
+img:hover{
+	cursor: pointer;
+    filter: brightness(70%);
+
+}
+
+
+#FullImageView{
+	display: none;
+	position: absolute;
+	top: 0;
+	margin-left: -165px;
+	width: 102%;
+	height: 75%;
+	background-color: rgba(0, 0, 0, 0.9);
+	text-align: center;
+}
+
+#FullImage{
+	padding: 24px;
+	min-width: 33%;
+	min-height: 90%;
+	margin-top: 20px;
+}
+#FullImage:hover{
+	filter: brightness(110%);
+}
+
+#CloseButton{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	font-size: 55px;
+	color: white;
+	cursor: pointer;
+}
+
+
+
+
+/*========================Button(btnhire) effects=======================*/
+.btnhire{
+	width: 250px;
+	padding: 15px 0;
+	text-align: center;
+	margin-top: 20px;
+	margin-left: 10px;
+	border-radius: 85px;
+	border: 2px solid red;
+	background: transparent;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 30px;
+	position: absolute;
+	bottom: 30px;
+	left: 600px;
+	overflow: hidden;
+	transition: 0.4s ease;
+}
+
+.btnhire a{
+	text-decoration: none;
+	color: black;
+}
+
+/*========================to change animation effect on Button(btnhire) start here=======================*/
+.btnhire:hover{
+	background: red;
+}
+
+.btnhire:focus{
+	outline: none;
+}
+
+.spanbtnhire {
+    color: red;
+    margin-left: 2px;
+    font-family: times new roman;
+    font-size: 130%;
+    transition: 0.4s ease;
+}
+
+.btnhire:hover span.spanbtnhire{
+	color: white;
+}
+
+
+
+/*========================SERVICES SECTION effects=======================*/
+#services{
+	display: block;
+	padding-left: 40px;
+	padding-right: 40px;
+	margin-top: -250px;
+}
+
+#services .title{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 40px;
+}
+
+
+#services .title h2{
+	color: red;
+	font-weight: medium;
+}
+
+.box1{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	min-height:400px;
+}
+
+
+.box2{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	min-height:400px;
+}
+
+
+
+.card{
+	display:inline-block;
+	height:365px;
+	width:335px;
+	padding:20px 35px;
+	background: linear-gradient(to top,rgba(0, 0, 0, 0.1)90%,rgba(0, 0, 0, 0.1)90%);
+	border-radius:20px;
+	margin:15px;
+	position:relative;
+	overflow:hidden;
+	text-align:center;
+	transition: 0.5 ease;
+	box-shadow: 0 0 17px 5px grey;
+}
+
+.card:hover{
+	background: lightgrey;
+	transform: scale(1.05);
+}
+
+
+
+.card h5{
+	color:black;
+	font-size:23px;
+	margin-top: 55px;
+}
+
+
+
+.pra p{
+color:black;
+font-size:16px;
+line-height:27px;
+margin-top: 5px;
+}
+
+
+
+/*========================Button(MORE INFO FOR SERVICE) effects=======================*/
+.button{
+	width: 130px;
+	height: 40px;
+	text-align: center;
+	margin-top: -30px;
+	margin-left: 125px;
+	border-radius: 85px;
+	border: 2px solid red;
+	background: transparent;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 20px;
+	position: absolute;
+	top: 350px;
+	right: 33%;
+	overflow: hidden;
+	transition: 0.4s ease;
+}
+
+.button a{
+	text-decoration: none;
+	color: black;
+}
+
+/*========================to change animation effect on Button(DOWNLOAD CV) start here=======================*/
+.button:hover{
+	background: red;
+}
+
+.button:focus{
+	outline: none;
+}
+
+
+
+/*========================CONTACT ME SECTION effects=======================*/
+#contactme{
+	margin-top: 50px;
+	background: linear-gradient(90deg,lightgrey 0%,lightgrey 30%, darkgrey 30%, darkgrey 100%);
+}
+
+
+.contactbox{
+	position: relative;
+	padding: 40px 100px;
+}
+
+
+.contactbox .title{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 40px;
+}
+
+
+.contactbox .title h2{
+	color: black;
+	font-weight: medium;
+}
+
+.box3{
+	display:inline-block;
+	margin-left: 90px;
+	position: relative;
+}
+
+.box4{
+	display:inline-block;
+	position: absolute;
+}
+
+
+
+/*========================form=======================*/
+.form{
+	display:inline-block;
+	height:480px;
+	width:400px;
+	padding:20px 35px;
+	background: white;
+	border-radius:20px;
+	margin:15px;
+	position:relative;
+	overflow:hidden;
+	text-align:left;
+	box-shadow: inset 0 0 20px black;
+}
+
+.form h2{
+	font-size: 30px;
+	color: black;
+	font-weight: 500;
+}
+
+.form .inputBox{
+	position: relative;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.form .inputBox input,
+.form .inputBox textarea{
+	width: 100%;
+	padding: 5px 0;
+	font-size: 16px;
+	margin: 10px 0;
+	border: none;
+	border-bottom: 2px solid red;
+	outline: none;
+	resize: none;
+}
+
+.form .inputBox span{
+	position: absolute;
+	left: 0;
+	padding: 5px 0;
+	font-size: 16px;
+	margin: 10px 0;
+	pointer-events: none;
+	transition: 0.5s;
+	color: #666;
+}
+
+.form .inputBox input:focus ~ span,
+.form .inputBox input:valid ~ span,
+.form .inputBox textarea:focus ~ span,
+.form .inputBox textarea:valid ~ span{
+	color: red;
+	font-size: 12px;
+	transform: translateY(-20px);
+}
+
+.form .inputBox input[type="submit"]{
+	width: 130px;
+	height: 40px;
+	text-align: center;
+	margin-top: -30px;
+	border-radius: 85px;
+	border: 2px solid red;
+	background: transparent;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 20px;
+	position: absolute;
+	top: 50px;
+	overflow: hidden;
+	transition: 0.4s ease;
+}
+
+/*========================to change animation effect on Button(DOWNLOAD CV) start here=======================*/
+.form .inputBox input[type="submit"]:hover{
+	background: red;
+}
+
+.form .inputBox input[type="submit"]:focus{
+	outline: none;
+}
+
+.form h3{
+	font-size: 17px;
+	color: black;
+	font-weight: normal;
+	margin-top: 100px;
+}
+
+
+/*========================contact=======================*/
+.contact{
+	display: flex;
+	height:70px;
+	width:400px;
+	padding:40px 5px;
+	background: lightgrey;
+	border-radius:20px;
+	margin:15px;
+	position:relative;
+	overflow:hidden;
+	text-align:left;
+	color: red;
+	box-shadow: inset 0 0 20px black;
+}
+
+.contact p{
+	color: black;
+}
+
+.contact .icon{
+	min-width: 60px;
+	height: 60px;
+	background: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	font-size: 22px;
+	margin-right: 5px;
+	margin-left: 10px;
+}
+
+
+/*========================map=======================*/
+.map{
+	display:block;
+	height:358px;
+	width:413px;
+	background: lightgrey;
+	border-radius:20px;
+	margin:15px;
+	position:relative;
+	overflow:hidden;
+}
+
+.map iframe{
+	width: 100%;
+	height: 100%;
+}
+
+
+
+/*========================FOOTER SECTION=======================*/
+#footer{
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	min-height: 100px;
+	background: grey;
+}
+
+footer{
+	position: relative;
+	width: 100%;
+	padding: 20px 50px;
+	display: block;
+	justify-content: center;
+	align-items: center;
+	min-height: 100px;
+	font-size: 20px;
+}
+
+footer .footer-menu{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px 0;
+	flex-wrap: wrap;
+}
+
+footer .footer-menu li{
+	list-style: none;
+}
+
+footer .footer-menu li a{
+	font-size: 80%;
+	color: black;
+	margin: 0 10px;
+	display: inline-block;
+	text-decoration: none;
+	transition: 0.4s ease-in-out;
+	opacity: 0.75;
+	padding-top: 10px;
+	font-weight: bold;
+}
+
+footer .footer-menu li a:hover{
+	opacity: 1;
+	color: white;
+	transform: translateY(-10px);
+}
+
+footer p{
+	color: black;
+	text-align: center;
+	margin-bottom: 10px;
+	font-size: 70%;
+	font-weight: bold;
+}
+
+footer .wave{
+	position: absolute;
+	top: -28px;
+	left: 0;
+	width: 100%;
+	height: 30%;
+	background: url(wave.png);
+	background-size: 800px 50px;
+}
+
+footer .wave#wave1{
+	z-index: 800;
+	opacity: 1;
+	bottom: 0;
+	animation: animateWave1 4s linear infinite;
+}
+
+footer .wave#wave2{
+	z-index: 799;
+	opacity: 0.8;
+	bottom: 10;
+	animation: animateWave2 2s linear infinite;
+}
+
+footer .wave#wave3{
+	z-index: 800;
+	opacity: 0.6;
+	bottom: 15;
+	animation: animateWave1 2s linear infinite;
+}
+
+footer .wave#wave4{
+	z-index: 799;
+	opacity: 0.4;
+	bottom: 20;
+	animation: animateWave2 4s linear infinite;
+}
+
+@keyframes animateWave1{
+	0%{
+		background-position-x: 800px;
+	}
+	100%{
+		background-position-x: 0px;
+	}
+}
+
+@keyframes animateWave2{
+	0%{
+		background-position-x: 0px;
+	}
+	100%{
+		background-position-x: 800px;
+	}
+}
+
+
+
+/*=========================================================================================
+===========================================================================================
+==================================MEDIA QUERIES============================================
+===========================================================================================
+=========================================================================================*/
+
+/*========================NAVIGATION BAR effects=======================*/
+.nav{
+	position: relative;
+	height: 100%;
+	padding-top: 20px;
+	padding-left: 100px;
+	background: black;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 70px;
+}
+
+/*=========================================================================================
+===========================================================================================
+===========================================================================================
+===========================================================================================
+=========================================================================================*/
